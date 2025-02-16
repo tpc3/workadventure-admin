@@ -1,0 +1,21 @@
+token: "YOUR_ADMIN_TOKEN"
+uuid_space: "64e40b5b-c4ce-4a3b-9016-f204d72eea2d" # any UUID to generate user UUID
+userinfo_endpoint: "https://auth.example.com/openid/userinfo" # OpenID userinfo endpoint
+redirects:
+  "/": "/@/yourgroup/office"
+maps:
+  "/@/yourgroup/office":
+    wamUrl: "https://workadventure.github.io/map-starter-kit/office.wam"
+    group: "yourgroup"
+    roomName: "yourgroup office"
+    editor_tags:
+    - "admin"
+  "/@/yourgroup/private":
+    mapUrl: "https://workadventure.github.io/map-starter-kit/office.tmj"
+    group: "yourgroup"
+    roomName: "yourgroup private office"
+    allowed_tags:
+    - "admin"
+tags:
+  "your_openid_sub":
+  - "admin"
